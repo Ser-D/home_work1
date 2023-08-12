@@ -1,5 +1,17 @@
 # home_work1
+Створюємо Git репозиторій і копіюємо HTTP
+
+Заходимо в провідник в папку з сейвами
+клік лівою кнопкою миші
+обираємо open git bash here
+відкривається вікно з командною строкою
+вводимо git clone http   --- http з GitHub
+
+
+відкриваємо VSC і в термінвлі прописуємо
 git add .
-git commit -m "first comm"
+git commit -m "Назва комміту"
 git push
+ 
+
  
