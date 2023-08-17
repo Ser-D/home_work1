@@ -1,14 +1,25 @@
 
-print("Hello")
-first_name = "Сергій"
-last_name = "Давидюк"
-full_name = first_name + last_name
-print(full_name)
 
-length = "2.75"
-width = "1.75"
-# length = int(length)
-# width = int(width)
-area = float(length) * float(width)
-show = f"With width {width} and length {length} of the room, its area is equal to {str(area)}"
-print(area)
+message = input("Enter a message: ")
+offset = int(input("Enter the offset: "))
+encoded_message = ""
+
+for ch in message:
+
+    if  ord(ch) >= 65 and ord(ch) <= 90:
+       ch_new = chr((ord(ch) - 65 + offset) % 26 + 65)
+    elif ord(ch) >= 97 and ord(ch) <= 122:
+        ch_new = chr((ord(ch) - 97 + offset) % 26 + 97)
+    else:
+         ch_new = ch
+    encoded_message += ch_new
+    
+
+print(encoded_message)
+
+
+
+    
+    
+
+
