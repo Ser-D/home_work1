@@ -1,0 +1,46 @@
+
+
+
+# def is_isogram(string):
+    
+#     return len(string) == len(set(string.lower()))
+    
+# print(is_isogram('HOcxS'))
+
+
+
+# def save_credentials_users(path, users_info):
+#      with open(path, 'wb') as fh:
+#           s = []
+#           for key, val in users_info.items():
+#                a = f'{key}:{val}\n'
+#                fh.write(b'\n')
+#                fh.write(a.encode())
+              
+#           print(a)
+
+
+# print(save_credentials_users('E:\\Навчання\\Python\\tect.txt', {'andry':'uyro18890D', 'steve':'oppjM13LL9e'}))
+
+# with open('E:\\Навчання\\Python\\tect.txt', 'rb') as fh:
+#      lines = fh.read().decode()
+#      print(fh.read(), lines, len(lines))
+
+
+
+import shutil
+
+
+def create_backup(path, file_name, employee_residence):
+
+    with open(f'{path}/{file_name}', 'wb') as fh:
+        for key, val in employee_residence.items():
+            a = f'{key} {val}\n'.encode()
+            fh.write(a)
+            print(f'{key} {val}\n'.encode())
+
+    archive_name = shutil.make_archive('backup_folder', 'zip', path)
+
+    return archive_name
+
+print(create_backup('E:\\Навчання\\Python', 'tect.txt', {'Michael': 'Canada', 'John':'USA', 'Liza': 'Australia'}))
